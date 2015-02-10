@@ -1,0 +1,83 @@
+//- Please don't forget to change the contact information selection on contact.jade else it'll show the wrong address.
+
+extends index.layout.jade
+
+//- block extraVariables
+//- 	- var client2="Brian"
+//- 	- var location2="Ontario"
+
+block title
+	title Toronto Aerospace Recruitment Agency Specialists &amp; Headhunters
+
+block metaspecific
+	//- include ./common6/includes/meta/meta.health.recruitment.TOR.112314.jade
+	//- include ./common6/includes/meta/meta.manuf.recruit.TOR.jade
+	//- include ./common6/includes/meta/meta.med.device.ON.jade
+	//- include ./common6/includes/meta/meta.aero.recruit.ON.jade
+	include ./common6/includes/meta/meta.aero.recruit.TOR.jade
+
+//- Note:  primary changes for scriptSet, gtmCode and header should be made in index.layout.Brian.jade or index.layout.Tanya.jade because this will cascade to all the other site pages and the duplicate index files. 
+//- If you make changes here they will only be reflected in index.html which isn't what we want.
+
+//- block scriptSet
+//- 	include ./common6/includes/head_scripts/head.scripts.Tanya.TOR.jade
+
+//- block gtmCode
+//- 	include ./common6/includes/gtm/gtm.aerospace.recruit.jade
+
+//- block header
+//- 	include ./common6/includes/header/header.Tanya.jade
+
+block leftSection
+	//- include ./common6/includes/left_sec/left_sec.health.recruitment.112314.1.jade
+	//- include ./common6/includes/left_sec/left_sec.manuf.recruitment.112114.1.jade
+	//- include ./common6/includes/left_sec/left_sec.med.device.112714.1.jade
+	include ./common6/includes/left_sec/left_sec.aero.recruitment.120414.1.jade
+
+block rightSection
+	//- include ./common6/includes/right_sec/right_sec.health.recruit.agencies.ON.112314.2.jade
+	//- include ./common6/includes/right_sec/right_sec.manu.recruit.agencies.ON.112414.1.jade
+	//- include ./common6/includes/right_sec/right_sec.manu.recruit.agencies.TO.112414.1.jade
+	//- include ./common6/includes/right_sec/right_sec.aviation.recruit.TOR.112614.1.jade
+	//- include ./common6/includes/right_sec/right_sec.med.dev.TOR.112714.1.jade
+	//- include ./common6/includes/right_sec/right_sec.med.dev.ON.112714.1.jade
+	include ./common6/includes/right_sec/right_sec.aero.recruit.TOR.120414.1.jade
+
+block testies
+	//- include ./common6/includes/testie/testimonial.Tanya.112214.jade
+	include ./common6/includes/testie/testimonial.Brian.112214.jade
+
+	//- if client2=="Brian"
+	//-   include ./common6/includes/testie/testimonial.Brian.112214.jade
+	//- else if client2=="Tanya"
+	//-   include ./common6/includes/testie/testimonial.Tanya.112214.jade
+	//- else
+	//-   p Error, you haven't supplied a client.
+
+	//- if client=="Brian"
+	//-   include ./common6/includes/testie/testimonial.Brian.112214.jade
+	//- else if client=="Tanya"
+	//-   include ./common6/includes/testie/testimonial.Tanya.112214.jade
+	//- else
+	//-   p Error, you haven't supplied a client.
+
+block clientLogos
+	//- include ./common6/includes/clientlogos/clientlogos.Tanya.health.112414.1.jade
+	include ./common6/includes/clientlogos/clientlogos.Brian.112214.jade
+
+	//- if client2=="Brian"
+	//-   include ./common6/includes/clientlogos/clientlogos.Brian.112214.jade
+	//- else if client2=="Tanya"
+	//-   include ./common6/includes/clientlogos/clientlogos.Tanya.health.112414.1.jade
+	//- else
+	//-   p Error, you haven't supplied a client.
+
+	//- if client=="Brian"
+	//-   include ./common6/includes/clientlogos/clientlogos.Brian.112214.jade
+	//- else if client=="Tanya"
+	//-   include ./common6/includes/clientlogos/clientlogos.Tanya.health.112414.1.jade
+	//- else
+	//-   p Error, you haven't supplied a client.
+
+//- block bottomBox
+//- 	include ./common6/includes/bottombox/bottombox.Tanya.112214.jade

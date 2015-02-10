@@ -1,0 +1,18 @@
+////////////////////////////////////////////////
+// 		AFFILIATION SPACE
+////////////////////////////////////////////////
+
+.affiliationSpace {
+	clear: both;
+	max-width: 100%;
+	background-color: lightblue;
+}
+
+.affiliationLogo1, .affiliationLogo2, .affiliationLogo3 {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.affiliationLogo1 img, .affiliationLogo2 img, .affiliationLogo3 img {
+	border-radius: 5px;
+}

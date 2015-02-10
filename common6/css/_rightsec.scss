@@ -1,0 +1,35 @@
+.right_sec { 
+	float:right; 
+	width:39%; 
+	margin-right:1%;
+	@include phabletZ {
+		width: 100%;
+		margin: 0;
+	}
+	& small {
+		font-weight:normal; 
+		font-size: $basefontsize*16/13; 
+		line-height: $baselineheight*20/16; 
+		color:#000;
+	}
+	& p {
+		font-size:$basefontsize*14/13; 
+		line-height:$baselineheight*22/16; 
+		color:#000; 
+		padding-bottom:20px; 
+		font-weight:bold;
+	}
+}
+
+#upperHomeImage {
+	text-align: center;
+}
+
+.making-home-img img {
+	border-radius: 2px;
+	@include homeImgShadow;
+}
+
+p.italicSentence {
+	font-style: italic;
+}

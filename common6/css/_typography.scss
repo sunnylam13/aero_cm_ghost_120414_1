@@ -1,0 +1,21 @@
+$basefontsize: 13px;
+$baselineheight: 16px;
+$basefontfamily: 'Open Sans', sans-serif;
+$skyblue: #277cae;
+$bottomBoxLineHeight: 34px;
+$bottomBoxFontSize: 28px;
+$footerLinkColour:#666666;
+$footerLinkHoverColour: #fff;
+$headerBackground: #27ae60;
+$headerBorderShade: 1px solid #565653;
+
+////////////////////////////////////////////////
+// 		MIXINS
+////////////////////////////////////////////////
+
+@mixin homeImgShadow {
+	-webkit-box-shadow: 10px 9px 60px -3px rgba(0,0,0,0.47);
+	-moz-box-shadow: 10px 9px 60px -3px rgba(0,0,0,0.47);
+	-o-box-shadow: 10px 9px 60px -3px rgba(0,0,0,0.47);
+	box-shadow: 10px 9px 60px -3px rgba(0,0,0,0.47);
+}

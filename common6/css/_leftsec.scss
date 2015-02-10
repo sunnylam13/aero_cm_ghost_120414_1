@@ -1,0 +1,41 @@
+.left_sec { 
+	float:left; 
+	width:54%; 
+	margin:0 0 0 1.5%;
+	@include phabletZ {
+		width: 100%;
+		margin: 0 0 20px 0;
+	}
+	& .pic {
+		float: left;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	& span {
+		color: #4F4F4F; font-size: 22px; display:block; padding-bottom:20px; width:100%; line-height:28px;
+	}
+	& p {
+		color: #000; 
+		font-size: $basefontsize*20/13;
+		padding-bottom:20px; 
+		line-height: $baselineheight*28/16;
+	}
+	& ul {
+		list-style:none; 
+		margin-left:20px;
+		& li {
+			background:url(../images/arrow-circle-right-3x.png) no-repeat  0 11px; 
+			font-size: 16px; 
+			line-height: 20px; 
+			padding-bottom: 18px; 
+			padding-left: 30px; 
+			color:#000;
+		}
+	}
+	& small {
+		font-weight:normal; 
+		font-size: 16px; 
+		line-height: 20px; 
+		color:#000;
+	}
+}

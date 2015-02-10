@@ -1,0 +1,223 @@
+////////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////////
+
+$basefontfamily: 'Open Sans', sans-serif;
+$clickButtonFont: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$clickButtonShadow: 2px 2px 0px #666;
+$clickButtonBackground:  #27ae60;
+$clickButtonBoxShadow: 2px 2px 3px grey;
+$clickButtonColor: white;
+
+$LogoRowStdPad: 1% 0 1% 0%;
+$LogoRowOddPad: 1% 0 1% 0%;
+$LogoRowEvenPad: 1% 0 1% 0%;
+$LogoRowLastPad: 1% 0 1% 0%;
+
+////////////////////////////////////////////////
+// 		MIXINS
+////////////////////////////////////////////////
+
+@mixin logoHoverEffect {
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-o-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-ms-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+@mixin clientClickEffect {
+	-webkit-box-shadow: inset -5px -7px 5px 0px rgba(102,204,102,1);
+	-moz-box-shadow: inset -5px -7px 5px 0px rgba(102,204,102,1);
+	-o-box-shadow: inset -5px -7px 5px 0px rgba(102,204,102,1);
+	-ms-box-shadow: inset -5px -7px 5px 0px rgba(102,204,102,1);
+	box-shadow: inset -5px -7px 5px 0px rgba(102,204,102,1);
+}
+
+// @mixin TanyaLogoRows {
+// 	&:nth-child(0) {
+// 		margin-left: 10%;
+// 	}
+// 	&:nth-child(1) {
+// 		margin-left: 20%;
+// 	}
+// 	&:nth-child(3) {
+// 		margin-left: 10%;
+// 	}
+// 	&:nth-child(4) {
+// 		margin-left: 15%;
+// 	}
+// 	&:nth-child(5) {
+// 		margin-left: 10%;
+// 	}
+// 	&:nth-child(6) {
+// 		margin-left: 15%;
+// 	}
+// 	&:nth-child(7) {
+// 		margin-left: 33%;
+// 	}
+// }
+
+////////////////////////////////////////////////
+// 		MAIN CODE
+////////////////////////////////////////////////
+
+.clientLogoSpace {
+	clear:both;
+	// width: 102.6%;
+	width: 100%;
+	& h2 {
+		text-align: center;
+		padding-top: 20px;
+	}
+}
+
+.clientLogoStack {
+	padding: 20px;
+	position: relative;
+	& img {
+		display: inline-block;
+		padding: 5%;
+		max-width: 33%;
+		max-height: 50%;
+		&:hover {
+			@include logoHoverEffect;
+		}
+	}
+	& span {
+		display: inline-block;
+		margin: 0 auto;
+	}
+}
+
+// Brian base template
+// .logoRow {
+// 	// padding: $LogoRowOddPad;
+// 	padding: $LogoRowStdPad;
+// 	width: 100%;
+// 	margin: 0 auto;
+// 	& img {
+// 		max-width: 23%;
+// 		margin: 0 1% 0 1%;
+// 	}
+// 	&:nth-child(2n) {
+// 		// padding: $LogoRowEvenPad;
+// 		& img {
+// 			max-width: 33.3%;
+// 		}
+// 	}
+// }
+
+.logoBrianRow {
+	// padding: $LogoRowOddPad;
+	padding: $LogoRowStdPad;
+	width: 100%;
+	margin: 0 auto;
+	& img {
+		max-width: 23%;
+		margin: 0 1% 0 1%;
+	}
+	&:nth-child(2n) {
+		// padding: $LogoRowEvenPad;
+		& img {
+			max-width: 33.3%;
+		}
+	}
+}
+
+// taken from _clientlogo.112314.1.scss
+.logoTanyaRow {
+	// padding: $LogoRowOddPad;
+	padding: $LogoRowStdPad;
+	width: 100%;
+	margin: 0 auto;
+	& img {
+		max-width: 20%;
+		margin: 0 1% 0 1%;
+	}
+	&:nth-child(2n) {
+		// padding: $LogoRowEvenPad;
+		& img {
+			max-width: 25%;
+		}
+	}
+	&:last-child {
+		// padding: $LogoRowLastPad;
+		& img {
+			max-width:50%;
+		}
+	}
+}
+
+// to properly centre each set of logo images you must surround the images in question with a div of their own
+// then you turn the container div into inline blocks
+// then you centre those inline blocks
+// this is the only way to centre each line of logos properly
+
+.logoContainer {
+	width: 100%;
+	margin: 0 auto;
+	display: inline-block;
+	text-align: center;
+	// @include TanyaLogoRows;
+}
+
+// For the emet.101714.1.png that is transparent and requires a background to be seen
+#emetBackground {
+	background: black;
+}
+
+.rack1 h2 {
+	text-align: center;
+}
+
+.rack1 img:nth-of-type(3) {
+	max-width: 20%;
+}
+
+.rack6 img:nth-of-type(3) {
+	max-width: 20%;
+}
+
+.rack2 span.callNowAction, .rack4 span.callNowAction, .rack6 span.callNowAction, .rack7 span.callNowAction {
+	display: none;
+}
+
+////////////////////////////////////////////////
+// 		SUBSECTION: CALL NOW STATEMENT
+////////////////////////////////////////////////
+
+.callNowAction {
+	font-family: $basefontfamily;
+	margin: 5%;
+	position: absolute;
+	bottom: 0;
+	left: 33.3%;
+}
+
+////////////////////////////////////////////////
+// 		SUBSECTION: SHOW MORE CLIENTS BUTTON
+////////////////////////////////////////////////
+
+.showMoreClientsClick {
+	font-family: $clickButtonFont;
+	margin: 5%;
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	text-shadow: $clickButtonShadow;
+	& a {
+		background: $clickButtonBackground;
+		padding: 3px;
+		border-radius: 3%;
+		box-shadow: $clickButtonBoxShadow;
+		color:$clickButtonColor;
+		&:link {
+			text-decoration: none;
+		}
+		&:hover {
+			@include clientClickEffect;
+		}
+	}
+}
+

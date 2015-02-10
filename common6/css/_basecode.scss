@@ -1,0 +1,39 @@
+* {
+	margin:0; 
+	padding:0;
+}
+
+img, fieldset{
+	border:none;
+}
+
+img { 
+	max-width:100%
+}
+
+:focus{
+	outline:none
+}
+
+a {
+	text-decoration:none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.right { 
+	float:right !important;
+}
+
+body{ 
+	font-size:$basefontsize; 
+	line-height:$baselineheight;  
+	background:#000;  
+	font-family: $basefontfamily;
+
+}
+
+strong {
+	color: $skyblue;
+}

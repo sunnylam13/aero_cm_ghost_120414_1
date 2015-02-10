@@ -1,0 +1,29 @@
+section.form_box
+  block formHeadline
+    strong
+      | Call Now Or Enter Your Info Below For Your FREE Consultation With An Expert Manufacturing Recruiter Right Here In Montreal
+  
+  block formCTA
+    small 
+      | Simply enter your info below or call (905) 482-0636 so we can help you hire the best talent for your company right now.
+
+  block formStandard
+    form(method='post', action='pylpemail.php')
+      fieldset
+        .row
+          label Name *
+          input.required(name='name', type='text', value='')
+        .row
+          label Email  *
+          input.required(name='from', type='text', value='')
+        .row
+          label Phone  *
+          input.required(name='custom_Phone', type='text', value='')
+        .row
+          label.padd_none
+            | Comments
+            br
+            | (Optional)
+          input(type='text', name='custom_Comments', value='')
+        span
+          input(type='submit', value='Submit Request')

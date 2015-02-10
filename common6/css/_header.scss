@@ -1,0 +1,59 @@
+////////////////////////////////////////////////
+// 		HEADER
+////////////////////////////////////////////////
+
+header { 
+	padding:25px 0 20px 0; 
+	border:$headerBorderShade; 
+	border-bottom:0; 
+	border-radius:10px 10px 0 0; 
+	float:left; 
+	// width:99.8%;
+	width: 100%;
+	position:relative; 
+	@include pieBehaviour;
+	// background:#339933;
+	background: $headerBackground;
+	@include phabletZ {
+		text-align: center;
+	}
+	& h1 {
+		float:right; 
+		width:46%;  
+		color: #FFF; 
+		font-size: $basefontsize*28/13; 
+		font-weight: bold; 
+		line-height:$baselineheight*35/16; 
+		text-align:center;
+		@include phabletZ {
+			width: 100%;
+		}
+		@include phoneZ {
+			font-size: 23px;
+		}
+		& a {
+			color:#000; 
+			cursor:default;
+		}
+	}
+}
+
+////////////////////////////////////////////////
+// 		LOGO
+////////////////////////////////////////////////
+
+.logo{ 
+	text-align:left;
+	& img {
+		margin:0 0 0 40px; 
+		float:left;
+		border-radius: 2px;
+		@include phabletZ {
+			float: none;
+			margin: 0;
+		}
+		@include phoneZ {
+			width: 280px;
+		}
+	}
+}

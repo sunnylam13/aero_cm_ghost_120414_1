@@ -1,0 +1,26 @@
+.btm_box { 
+	float:left; 
+	width:100%; 
+	background:url(../images/bottom.image.101014.1.png) no-repeat 0 0; 
+	background-size:100% 100%; 
+	font-size: $basefontsize*23/13;
+	line-height: $baselineheight*18/16;
+	color:#fff; 
+	font-family: $basefontfamily;
+	padding:32px 0; 
+	text-align:center; 
+	margin:20px 0 0 0;
+	& a {
+		color:#fff; 
+		cursor:default
+	}
+	@include tabletZ {
+		font-size: 25px;
+		line-height: 27px;
+	}
+	@include phoneZ {
+		font-size: $basefontsize*11/13;
+		line-height: $baselineheight*12/16;
+		padding: 20px 0;
+	}
+}

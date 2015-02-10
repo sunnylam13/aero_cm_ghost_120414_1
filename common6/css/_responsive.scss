@@ -1,0 +1,103 @@
+////////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////////
+
+$media: screen;
+$phone-width: 480px;
+$tablet-width: 768px;
+$smalldesk-width: 969px;
+$desktop-width: 1024px;
+
+////////////////////////////////////////////////
+// 		MIXINS
+////////////////////////////////////////////////
+
+
+@mixin tabletZ {
+	// @media #{$media} and (min-width: #{$tablet-width}) and (max-width: #{$smalldesk-width}) {
+	// 	@content;
+	// }
+    //  apparently using #{$media} does not work 
+    @media only screen and (min-width:#{$tablet-width}) and (max-width: #{$smalldesk-width}) {
+        @content;
+    }
+}
+
+@mixin phabletZ {
+	// @media ${$media} and (max-width: 767px) {
+	// 	@content;
+	// }
+    //  apparently using #{$media} does not work 
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin phoneZ {
+	// @media ${$media} and (max-width:$phone-width) {
+	// 	@content;
+	// }
+    //  apparently using #{$media} does not work  
+    @media only screen and (max-width:#{$phone-width}) {
+        @content;
+    }
+}
+
+//////////////////////////////////////////////
+// 		PRIMARY CODE
+////////////////////////////////////////////////
+
+
+// @media screen and (min-width: 768px) and (max-width:969px){
+//     body {display:none}
+// 	.wrapper{ padding:0 10px;}
+// 	.form_box form input[type="text"]{ width:126px;}
+// 	.form_box strong{ font-size:16px;}
+// 	.body_cntr h2{ font-size:19px;}
+// 	.btm_box{ font-size:25px; line-height:27px}
+// }
+
+// @media screen and (max-width: 767px) {
+//     .wrapper{ padding:0 10px;}
+//     .logo img{ float:none; margin:0}
+//     header h1{ width:100%}
+//     header{ text-align:center}
+//     .left_sec{ width:100%; margin:0 0 20px 0}
+//     .right_sec{ width:100%; margin:0}
+//     .btm_box{ font-size:16px; line-height:22px;}
+//     footer{ text-align:center}
+//     .form_box form input[type="text"]{ width:68%}
+// }
+
+// @media screen and (max-width: 480px) {
+//     .body_cntr{ width:94%; padding:48px 3% 25px 3%;}
+
+//     .logo img{ width:280px}
+//     header h1{ font-size:23px;}
+//     .body_cntr h2{ font-size:20px}
+//     .form_box form input[type="text"]{ width:50%;}
+//     .btm_box { font-size: 9px; line-height: 12px;padding:20px 0}
+//     .form_box strong{ font-size:16px;}
+//     .testimonialSpace div {
+//     	width: 100%;
+//         margin-bottom: 2%;
+// 	}
+// }
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

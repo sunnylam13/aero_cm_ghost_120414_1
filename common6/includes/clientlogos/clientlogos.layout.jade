@@ -1,0 +1,114 @@
+
+////////////////////////////////////////////////
+//    MIXINS
+////////////////////////////////////////////////
+
+//- // Tanya's phone (416) 598-4020
+//- // Brian's phone (905) 482-0636
+//- mixin callNowAction(phone)
+//-   span.callNowAction Call Now For Your FREE Consultation =phone
+
+mixin createImages(array)
+  each val in array
+    img(src=val,alt='Client Logo')
+
+////////////////////////////////////////////////
+//    PRIMARY CODE
+////////////////////////////////////////////////
+
+.clientLogoSpace
+  block h2
+    h2 Clients Include...
+  .clientLogoStack.rack1
+    block imageSet1
+      img.img1(src='common6/images/clientLogos/cel.101914.1.jpg', alt='Client Logo')
+      img.img2(src='common6/images/clientLogos/bl.101914.1.jpg', alt='Client Logo')
+      img.img3(src='common6/images/clientLogos/byl.101714.2.png', alt='Client Logo')
+    span.callNowAction Call Now For Your FREE Consultation 
+      block phoneNumber
+        | (905) 482-0636
+    br
+    span.showMoreClientsClick.moreClientLogos
+      a(href='javascript:void(0)') Click here for more clients...
+  .clientLogoStack.rack2
+    block imageSet2
+      img(src='common6/images/clientLogos/acc.101914.1.jpg', alt='Client Logo')
+      img(src='common6/images/clientLogos/stc.101914.1.png', alt='Client Logo')
+      img(src='common6/images/clientLogos/t.101914.1.gif', alt='Client Logo')
+    span.callNowAction Call Now For Your FREE Consultation 
+      block phoneNumber
+        | (905) 482-0636
+    span.showMoreClientsClick.moreClientLogos
+      a(href='javascript:void(0)') Click here for more clients...
+  .clientLogoStack.rack3
+    block imageSet3
+      img(src='common6/images/clientLogos/elm.101714.1.jpg', alt='Client Logo')
+      img#emetBackground(src='common6/images/clientLogos/emet.101714.1.png', alt='Client Logo')
+      img(src='common6/images/clientLogos/ger.101914.1.gif', alt='Client Logo', height='200')
+    span.callNowAction Call Now For Your FREE Consultation 
+      block phoneNumber
+        | (905) 482-0636
+    span.showMoreClientsClick.moreClientLogos
+      a(href='javascript:void(0)') Click here for more clients...
+  .clientLogoStack.rack4
+    block imageSet4
+      img(src='common6/images/clientLogos/ind.101914.1.gif', alt='Client Logo')
+      img(src='common6/images/clientLogos/k.101714.2.jpg', alt='Client Logo')
+      img(src='common6/images/clientLogos/mak.101714.1.jpg', alt='Client Logo')
+    span.callNowAction Call Now For Your FREE Consultation 
+      block phoneNumber
+        | (905) 482-0636
+    span.showMoreClientsClick.moreClientLogos
+      a(href='javascript:void(0)') Click here for more clients...
+  .clientLogoStack.rack5
+    block imageSet5
+      img(src='common6/images/clientLogos/ck.101714.2.jpg', alt='Client Logo')
+      img(src='common6/images/clientLogos/na.101914.1.jpg', alt='Client Logo')
+      img(src='common6/images/clientLogos/no.101914.1.jpg', alt='Client Logo')
+    span.callNowAction Call Now For Your FREE Consultation 
+      block phoneNumber
+        | (905) 482-0636
+    span.showMoreClientsClick.moreClientLogos
+      a(href='javascript:void(0)') Click here for more clients...
+  .clientLogoStack.rack6
+    block imageSet6
+      img(src='common6/images/clientLogos/pc.101914.1.png', alt='Client Logo')
+      img(src='common6/images/clientLogos/polyair.101914.1.gif', alt='Client Logo')
+      img(src='common6/images/clientLogos/pp.101914.1.jpeg', alt='Client Logo')
+    span.callNowAction Call Now For Your FREE Consultation 
+      block phoneNumber
+        | (905) 482-0636
+    span.showMoreClientsClick.moreClientLogos
+      a(href='javascript:void(0)') Click here for more clients...
+  .clientLogoStack.rack7
+    block imageSet7
+      img(src='common6/images/clientLogos/ss.jpg', alt='Client Logo')
+      img(src='common6/images/clientLogos/awm.101914.1.jpg', alt='Client Logo')
+      //
+         <img src="common6/images/clientLogos/ck.101714.2.jpg" alt="Client Logo"> 
+    span.callNowAction Call Now For Your FREE Consultation 
+      block phoneNumber
+        | (905) 482-0636
+    span.showMoreClientsClick.moreClientLogos
+      a(href='javascript:void(0)') Click here for more clients...
+  .clientLogoStack.rack8
+    block imageSet8
+    span.callNowAction Call Now For Your FREE Consultation 
+      block phoneNumber
+        | (905) 482-0636
+    span.showMoreClientsClick.moreClientLogos
+      a(href='javascript:void(0)') Click here for more clients...
+  .clientLogoStack.rack9
+    block imageSet9
+    span.callNowAction Call Now For Your FREE Consultation 
+      block phoneNumber
+        | (905) 482-0636
+    span.showMoreClientsClick.moreClientLogos
+      a(href='javascript:void(0)') Click here for more clients...
+  .clientLogoStack.rack10
+    block imageSet10
+    span.callNowAction Call Now For Your FREE Consultation 
+      block phoneNumber
+        | (905) 482-0636
+    span.showMoreClientsClick.moreClientLogos
+      a(href='javascript:void(0)') Click here for more clients...

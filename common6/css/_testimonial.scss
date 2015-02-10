@@ -1,0 +1,120 @@
+////////////////////////////////////////////////
+// 		VARIABLES
+////////////////////////////////////////////////
+
+// set testimonial box width to 50% if only two
+// if 3 then use 33.3%
+$testieBoxWidth: 48%;
+// if using margins around the testie boxes subtract the total of left and right margins from $testieBoxWidth above
+$testieBoxMargin: 0 1% 0 1%;
+
+// $baselineheight: 2em;
+$testiePadding:15px;
+
+////////////////////////////////////////////////
+// 		MIXINS
+////////////////////////////////////////////////
+
+@mixin testieGradient {
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #6bb829 100%);
+
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #6bb829 100%);
+
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #6bb829 100%);
+
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #6bb829));
+
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #6bb829 100%);
+
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #FFFFFF 0%, #6bb829 100%);
+	-webkit-box-shadow: 10px 9px 60px -3px rgba(0,0,0,0.47);
+	-moz-box-shadow: 10px 9px 60px -3px rgba(0,0,0,0.47);
+	box-shadow: 10px 9px 60px -3px rgba(0,0,0,0.47);
+}
+
+////////////////////////////////////////////////
+// 		TESTIMONIAL SPACE
+////////////////////////////////////////////////
+
+.testimonialSpace {
+	clear: both;
+	max-width: 100%;
+	& div {
+		width: $testieBoxWidth;
+		float: left;
+		height: 100%;
+		@include phoneZ {
+			width: 100%;
+			margin-bottom: 2%;
+		}
+		& p {
+			line-height: $baselineheight*1.33;
+		}
+	}
+	& h2 {
+		text-align: center;
+		// margin-bottom: 20px;
+	}
+}
+
+.testie1, .testie2, .testie3 {
+	border-radius: 5px;
+	border:0;
+	@include testieGradient;
+	margin: $testieBoxMargin;
+}
+
+.testie1 {
+	padding: $testiePadding;
+}
+
+.testie2 {
+	text-align: left;
+	padding: $testiePadding;
+}
+
+.testie3 {
+	text-align: left;
+	padding: $testiePadding;
+}
+
+.boldPartQuote {
+	font-weight: bold;
+	color: blue;
+}
+
+.testieQuote {
+	font-style: italic;
+}
+
+.testieName {
+	font-weight: bold;
+	font-size: small;
+	margin: 5px 0 5px 0;
+}
+
+.testieCompany {
+	font-weight: bold;
+	font-size: small;
+	margin: 5px 0 5px 0;
+}
+
+
+////////////////////////////////////////////////
+// 		SUBHEAD: DISCLAIMERS
+////////////////////////////////////////////////
+
+.disclaimer a {
+	font-size: 7px;
+	color: black;
+}
+
+.disclaimerExitButton {
+	text-align: center;
+}

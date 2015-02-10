@@ -1,0 +1,70 @@
+//- ===================================
+//- VARIABLES
+//- ===================================
+
+//- - var tanyaRowNumbers = 7
+
+- var tanyaRow1 = ['common6/images/clientLogos/tanya.all.112314/sunlife.png','common6/images/clientLogos/tanya.all.112314/medisys.png','common6/images/clientLogos/tanya.all.112314/clevelandclinic.png','common6/images/clientLogos/tanya.all.112314/centrichealth.png','common6/images/clientLogos/tanya.all.112314/baycrest.png']
+
+- var tanyaRow2 = ['common6/images/clientLogos/tanya.all.112314/lifemark.png','common6/images/clientLogos/tanya.all.112314/proctor.png','common6/images/clientLogos/tanya.all.112314/cargill.png','common6/images/clientLogos/tanya.all.112314/qualicare.png']
+
+- var tanyaRow3 = ['common6/images/clientLogos/tanya.all.112314/tcmi.png','common6/images/clientLogos/tanya.all.112314/medcan.png','common6/images/clientLogos/tanya.all.112314/lakeshore.png','common6/images/clientLogos/tanya.all.112314/pursuithealth.png','common6/images/clientLogos/tanya.all.112314/livingassist.png']
+
+- var tanyaRow4 = ['common6/images/clientLogos/tanya.all.112314/leisureworld.png','common6/images/clientLogos/tanya.all.112314/providence.png','common6/images/clientLogos/tanya.all.112314/mmtr.png','common6/images/clientLogos/tanya.all.112314/actionphysio.png']
+
+- var tanyaRow5 = ['common6/images/clientLogos/tanya.all.112314/cbi.png','common6/images/clientLogos/tanya.all.112314/foxhealth.png','common6/images/clientLogos/tanya.all.112314/creditvalley.png','common6/images/clientLogos/tanya.all.112314/rehabresults.png','common6/images/clientLogos/tanya.all.112314/nrio.png']
+
+- var tanyaRow6 = ['common6/images/clientLogos/tanya.all.112314/stl.png','common6/images/clientLogos/tanya.all.112314/kidspeech.png','common6/images/clientLogos/tanya.all.112314/acclaim.png','common6/images/clientLogos/tanya.all.112314/medicalpharmacies.png']
+
+- var tanyaRow7 = ['common6/images/clientLogos/tanya.all.112314/rads247.png','common6/images/clientLogos/tanya.all.112314/headache.png']
+
+- var tanyaLogoSet = [tanyaRow1,tanyaRow2,tanyaRow3,tanyaRow4,tanyaRow5,tanyaRow6,tanyaRow7]
+
+- var brianRow1 = ['common6/images/clientLogos/brian.panel.112414/cel.101914.png','common6/images/clientLogos/brian.panel.112414/byl.101714.png','common6/images/clientLogos/brian.panel.112414/no.101914.png','common6/images/clientLogos/brian.panel.112414/stc.101914.png']
+- var brianRow2 = ['common6/images/clientLogos/brian.panel.112414/polyair.101914.png','common6/images/clientLogos/brian.panel.112414/pc.101914.png','common6/images/clientLogos/brian.panel.112414/ss.png']
+- var brianRow3 = ['common6/images/clientLogos/brian.panel.112414/emet.101714.png','common6/images/clientLogos/brian.panel.112414/acc.101914.png','common6/images/clientLogos/brian.panel.112414/ind.101914.png','common6/images/clientLogos/brian.panel.112414/ck.101714.png']
+- var brianRow4 = ['common6/images/clientLogos/brian.panel.112414/elm.101714.png','common6/images/clientLogos/brian.panel.112414/k.101714.png','common6/images/clientLogos/brian.panel.112414/awm.101914.png']
+- var brianRow5 = ['common6/images/clientLogos/brian.panel.112414/t.101914.png','common6/images/clientLogos/brian.panel.112414/pp.101914.png','common6/images/clientLogos/brian.panel.112414/ger.101914.png','common6/images/clientLogos/brian.panel.112414/na.101914.png','common6/images/clientLogos/brian.panel.112414/mak.101714.png']
+
+- var brianLogoSet = [brianRow1,brianRow2,brianRow3,brianRow4,brianRow5]
+
+//- ===================================
+//- MIXINS
+//- ===================================
+
+//- // Tanya's phone (416) 598-4020
+//- // Brian's phone (905) 482-0636
+//- mixin callNowAction(phone)
+//-   span.callNowAction Call Now For Your FREE Consultation =phone
+
+mixin createImages(array)
+  each val in array
+    img(src=val,alt='Client Logo')
+
+mixin createRow(logoSet)
+  each val,index in logoSet
+    .logoRow
+      .logoContainer 
+        +createImages(val)
+
+mixin logoTanyaRow(logoSet)
+  each val,index in logoSet
+    .logoTanyaRow
+      .logoContainer 
+        +createImages(val)
+
+mixin logoBrianRow(logoSet)
+  each val,index in logoSet
+    .logoBrianRow
+      .logoContainer 
+        +createImages(val)
+
+//- ===================================
+//- PRIMARY CODE
+//- ===================================
+
+.clientLogoSpace
+  block h2
+    h2 Clients Include...
+  block craftRows
+    +logoTanyaRow(tanyaLogoSet)

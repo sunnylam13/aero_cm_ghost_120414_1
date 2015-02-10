@@ -1,0 +1,97 @@
+//- You will use this template file to customize the entire site for most pages.
+//- The only files that require customization are contact.jade and index.jade.  
+//- Specific sections to change in this file are: linkSet, scriptSet, gtmCode, header, bottombox  
+
+block indexLayVariables
+  //- options:  Tanya, Brian
+  - var client="Brian"
+  //- options:  Toronto, Montreal, Ontario
+  - var location="Ontario"
+
+doctype html
+head
+  block metaBase
+    include ./common6/includes/meta/meta.base.jade
+  block metaExtra
+  block title
+    //- this will be customized in index.jade
+  block metaspecific
+    //- this will be customized in index.jade
+    //- include ./common6/includes/meta/meta.manuf.recruit.jade
+  block linkSet
+    include ./common6/includes/head_links/head.links.jade
+  block scriptSet
+
+    if client=="Brian"
+      if !location=="Toronto"
+        include ./common6/includes/head_scripts/head.scripts.Brian.tollfree.jade
+      else if location=="Toronto"
+        include ./common6/includes/head_scripts/head.scripts.Brian.TOR.jade
+      else
+        include ./common6/includes/head_scripts/head.scripts.jade
+    else if client=="Tanya"
+      if !location=="Toronto"
+        include ./common6/includes/head_scripts/head.scripts.Tanya.tollfree.jade
+      else if location=="Toronto"
+        include ./common6/includes/head_scripts/head.scripts.Tanya.TOR.jade
+      else
+        include ./common6/includes/head_scripts/head.scripts.jade
+
+    //- include ./common6/includes/head_scripts/head.scripts.jade
+    //- include ./common6/includes/head_scripts/head.scripts.Brian.tollfree.jade
+    //- include ./common6/includes/head_scripts/head.scripts.Brian.TOR.jade
+    //- include ./common6/includes/head_scripts/head.scripts.Tanya.TOR.jade
+    //- include ./common6/includes/head_scripts/head.scripts.Tanya.tollfree.jade
+  block otherTrackCodes
+    //- enter other tracking codes here
+body
+  block gtmCode
+    //- include ./common6/includes/gtm/gtm.jade
+    //- include ./common6/includes/gtm/gtm.manuf.recruit.jade
+    //- include ./common6/includes/gtm/gtm.health.recruit.jade
+    include ./common6/includes/gtm/gtm.aerospace.recruit.jade
+
+  .wrapper.clearfix
+    section#main
+      block header
+        //- include ./common6/includes/header/header.jade
+        //- include ./common6/includes/header/header.Brian.jade
+        //- include ./common6/includes/header/header.Tanya.jade
+
+        if client=="Brian"
+          include ./common6/includes/header/header.Brian.jade
+        else if client=="Tanya"
+          include ./common6/includes/header/header.Tanya.jade
+        else
+          p Client not supplied
+          
+      section.body_cntr
+        block body_centre
+          block leftSection
+            //- this will be customized in index.jade
+            //- include ./common6/includes/left_sec/left_sec.jade
+          block rightSection
+            //- this will be customized in index.jade
+            //- include ./common6/includes/right_sec/right_sec.jade
+        block testies
+          //- this will be customized in index.jade
+          //- include ./common6/includes/testie/testimonial.jade
+        block affiliation
+          //- this will be customized in index.jade
+          //- include ./common6/includes/affiliation/affiliation.jade
+        block clientLogos
+          //- this will be customized in index.jade
+          //- include ./common6/includes/clientlogos/clientlogos.jade
+        block bottomBox
+
+          if client=="Brian"
+            include ./common6/includes/bottombox/bottombox.Brian.112214.jade
+          else if client=="Tanya"
+            include ./common6/includes/bottombox/bottombox.Tanya.112214.jade
+          else
+            p Error, you haven't supplied a client.
+
+          //- include ./common6/includes/bottombox/bottombox.jade
+          //- include ./common6/includes/bottombox/bottombox.Brian.112214.jade
+          //- include ./common6/includes/bottombox/bottombox.Tanya.112214.jade
+    include ./common6/includes/footer/footer.jade
