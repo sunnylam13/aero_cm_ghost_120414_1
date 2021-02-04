@@ -31,7 +31,7 @@
   <!-- End Google Tag Manager -->
   <div class="wrapper clearfix">
     <section id="main">
-      <header><a href="index.html" class="logo"><img src="common6/images/1412984300-2396-28733.jpg" alt="Campbell Morden Logo"></a>
+      <header><a class="logo" href="index.html"><img src="common6/images/1412984300-2396-28733.jpg" alt="Campbell Morden Logo"></a>
         <h1>Call Now For Your</h1>
         <h1>FREE Consultation</h1>
         <h1>(905) 482-0636</h1>
@@ -39,7 +39,7 @@
       <section class="body_cntr">
         <section class="left_sec">
           <div class="pic">
-            <div id="upperHomeImage" class="making-home-img"><img src="common6/images/1412984300-2396-95836.jpg" width="325" alt="Home Page Image"></div>
+            <div class="making-home-img" id="upperHomeImage"><img src="common6/images/1412984300-2396-95836.jpg" width="325" alt="Home Page Image"></div>
           </div>
           <h2>If You’re a Business That Wants to Fill Specialized "Aerospace" Roles With Expert Talent You Should Call Us Right Now</h2><span>Learn How You Can Acquire Qualified, Experienced and Skilled <em>Engineers, Technical Sales People or Managers…</em>And Pay As Low As 15% On Recruiting Fees</span>
           <p>We're An Aerospace Recruitment Agency That Specializes In Aerospace &amp; Aviation Businesses...</p>
@@ -57,21 +57,20 @@
           <!-- recall that form_box.pug is in the same 'includes' folder so you can skip the 'common6/includes/'-->
           <!-- when you create the true right_sec for the project you will extend the form manually-->
           <section class="form_box"><strong>Call Now Or Enter Your Info Below For Your FREE Consultation With An Aerospace Recruitment Specialist Right Here In Toronto</strong><small>
-               
-              Simply enter your info below or call (905) 482-0636 so we can help you hire the best talent for your company right now.</small>
+               Simply enter your info below or call (905) 482-0636 so we can help you hire the best talent for your company right now.</small>
             <form method="post" action="pylpemail.php">
               <fieldset>
                 <div class="row">
                   <label>Name *</label>
-                  <input name="name" type="text" value="" class="required">
+                  <input class="required" name="name" type="text" value="">
                 </div>
                 <div class="row">
                   <label>Email  *</label>
-                  <input name="from" type="text" value="" class="required">
+                  <input class="required" name="from" type="text" value="">
                 </div>
                 <div class="row">
                   <label>Phone  *</label>
-                  <input name="custom_Phone" type="text" value="" class="required">
+                  <input class="required" name="custom_Phone" type="text" value="">
                 </div>
                 <div class="row">
                   <label class="padd_none">Comments<br>(Optional)</label>
@@ -129,7 +128,8 @@
         </div>
         <div class="btm_box">
           Call Now For Your
-          FREE Consultation (905) 482-0636</div>
+          FREE Consultation (905) 482-0636
+        </div>
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
         <div style="text-align: center; clear: both;"><a href="#" onclick="jQuery('#contact-box').toggle('slow'); return false;">Contact Us</a></div>
         <div id="contact-box" style="display: none; width: 200px; margin-left: 40px; font-size: 14px;">Campbell Morden Search Consultants<br>400 Applewood Crescent Unit #100<br>Vaughan, ON  L4K 0C3<br>Phone: (905) 482-0636<br></div>
