@@ -1,9 +1,9 @@
 //- You will use this template file to customize the entire site for most pages.
-//- The only files that require customization are contact.jade and index.jade.  
+//- The only files that require customization are contact.pug and index.pug.  
 //- Specific sections to change in this file are: linkSet, scriptSet, gtmCode, header, bottombox  
 
-//- extends index.layout.Tanya.jade
-//- extends index.layout.Brian.jade
+//- extends index.layout.Tanya.pug
+//- extends index.layout.Brian.pug
 
 doctype html
 
@@ -17,87 +17,87 @@ block extraVariables
 
 head
   block metaBase
-    include ./common6/includes/meta/meta.base.jade
+    include ./common6/includes/meta/meta.base.pug
   block metaExtra
   block title
-    //- this will be customized in index.jade
+    //- this will be customized in index.pug
   block metaspecific
-    //- this will be customized in index.jade
-    //- include ./common6/includes/meta/meta.manuf.recruit.jade
+    //- this will be customized in index.pug
+    //- include ./common6/includes/meta/meta.manuf.recruit.pug
   block linkSet
-    include ./common6/includes/head_links/head.links.jade
+    include ./common6/includes/head_links/head.links.pug
   block scriptSet
 
     if client=="Brian"
       if !location=="Toronto"
-        include ./common6/includes/head_scripts/head.scripts.Brian.tollfree.jade
+        include ./common6/includes/head_scripts/head.scripts.Brian.tollfree.pug
       else if location=="Toronto"
-        include ./common6/includes/head_scripts/head.scripts.Brian.TOR.jade
+        include ./common6/includes/head_scripts/head.scripts.Brian.TOR.pug
       else
-        include ./common6/includes/head_scripts/head.scripts.jade
+        include ./common6/includes/head_scripts/head.scripts.pug
     else if client=="Tanya"
       if !location=="Toronto"
-        include ./common6/includes/head_scripts/head.scripts.Tanya.tollfree.jade
+        include ./common6/includes/head_scripts/head.scripts.Tanya.tollfree.pug
       else if location=="Toronto"
-        include ./common6/includes/head_scripts/head.scripts.Tanya.TOR.jade
+        include ./common6/includes/head_scripts/head.scripts.Tanya.TOR.pug
       else
-        include ./common6/includes/head_scripts/head.scripts.jade
+        include ./common6/includes/head_scripts/head.scripts.pug
 
-    //- include ./common6/includes/head_scripts/head.scripts.jade
-    //- include ./common6/includes/head_scripts/head.scripts.Brian.tollfree.jade
-    //- include ./common6/includes/head_scripts/head.scripts.Brian.TOR.jade
-    //- include ./common6/includes/head_scripts/head.scripts.Tanya.TOR.jade
-    //- include ./common6/includes/head_scripts/head.scripts.Tanya.tollfree.jade
+    //- include ./common6/includes/head_scripts/head.scripts.pug
+    //- include ./common6/includes/head_scripts/head.scripts.Brian.tollfree.pug
+    //- include ./common6/includes/head_scripts/head.scripts.Brian.TOR.pug
+    //- include ./common6/includes/head_scripts/head.scripts.Tanya.TOR.pug
+    //- include ./common6/includes/head_scripts/head.scripts.Tanya.tollfree.pug
   block otherTrackCodes
     //- enter other tracking codes here
 body
   block gtmCode
-    //- include ./common6/includes/gtm/gtm.jade
-    //- include ./common6/includes/gtm/gtm.manuf.recruit.jade
-    //- include ./common6/includes/gtm/gtm.health.recruit.jade
-    include ./common6/includes/gtm/gtm.aerospace.recruit.jade
+    //- include ./common6/includes/gtm/gtm.pug
+    //- include ./common6/includes/gtm/gtm.manuf.recruit.pug
+    //- include ./common6/includes/gtm/gtm.health.recruit.pug
+    include ./common6/includes/gtm/gtm.aerospace.recruit.pug
 
   .wrapper.clearfix
     section#main
       block header
-        //- include ./common6/includes/header/header.jade
-        //- include ./common6/includes/header/header.Brian.jade
-        //- include ./common6/includes/header/header.Tanya.jade
+        //- include ./common6/includes/header/header.pug
+        //- include ./common6/includes/header/header.Brian.pug
+        //- include ./common6/includes/header/header.Tanya.pug
 
         if client=="Brian"
-          include ./common6/includes/header/header.Brian.jade
+          include ./common6/includes/header/header.Brian.pug
         else if client=="Tanya"
-          include ./common6/includes/header/header.Tanya.jade
+          include ./common6/includes/header/header.Tanya.pug
         else
           p Client not supplied
           
       section.body_cntr
         block body_centre
           block leftSection
-            //- this will be customized in index.jade
-            //- include ./common6/includes/left_sec/left_sec.jade
+            //- this will be customized in index.pug
+            //- include ./common6/includes/left_sec/left_sec.pug
           block rightSection
-            //- this will be customized in index.jade
-            //- include ./common6/includes/right_sec/right_sec.jade
+            //- this will be customized in index.pug
+            //- include ./common6/includes/right_sec/right_sec.pug
         block testies
-          //- this will be customized in index.jade
-          //- include ./common6/includes/testie/testimonial.jade
+          //- this will be customized in index.pug
+          //- include ./common6/includes/testie/testimonial.pug
         block affiliation
-          //- this will be customized in index.jade
-          //- include ./common6/includes/affiliation/affiliation.jade
+          //- this will be customized in index.pug
+          //- include ./common6/includes/affiliation/affiliation.pug
         block clientLogos
-          //- this will be customized in index.jade
-          //- include ./common6/includes/clientlogos/clientlogos.jade
+          //- this will be customized in index.pug
+          //- include ./common6/includes/clientlogos/clientlogos.pug
         block bottomBox
 
           if client=="Brian"
-            include ./common6/includes/bottombox/bottombox.Brian.112214.jade
+            include ./common6/includes/bottombox/bottombox.Brian.112214.pug
           else if client=="Tanya"
-            include ./common6/includes/bottombox/bottombox.Tanya.112214.jade
+            include ./common6/includes/bottombox/bottombox.Tanya.112214.pug
           else
             p Error, you haven't supplied a client.
 
-          //- include ./common6/includes/bottombox/bottombox.jade
-          //- include ./common6/includes/bottombox/bottombox.Brian.112214.jade
-          //- include ./common6/includes/bottombox/bottombox.Tanya.112214.jade
-    include ./common6/includes/footer/footer.jade
+          //- include ./common6/includes/bottombox/bottombox.pug
+          //- include ./common6/includes/bottombox/bottombox.Brian.112214.pug
+          //- include ./common6/includes/bottombox/bottombox.Tanya.112214.pug
+    include ./common6/includes/footer/footer.pug
